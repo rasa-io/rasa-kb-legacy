@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why isn't my newsletter in my inbox? · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link active" href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/general.html">General</a>
+    <span class="sep">/</span><span>Why isn&#39;t my newsletter in my inbox?</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Why isn&#39;t my newsletter in my inbox?</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/general.html">General</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/why-isnt-my-newsletter-in-my-inbox" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">DMARC</span><span class="kw">Email</span><span class="kw">domain authentication</span><span class="kw">newsletter delivery</span><span class="kw">SPAM folder</span><span class="kw">inbox issues</span><span class="kw">email filtering</span><span class="kw">trustworthy emails</span><span class="kw">Send From address</span><span class="kw">email contacts</span><span class="kw">email settings</span><span class="kw">email provider settings</span></div>
+    </header>
+    <div class="article-body"><p><em>If it looks like your newsletter generated successfully — but you didn’t receive it in your inbox, the issue is almost always on your mailbox or internal security end.</em></p>
+<h6>1. It Likely Did Send Successfully</h6>
+<p>If your newsletter:</p>
+<ul>
+<li>Shows a <strong>current send date</strong> in Analytics or Content &gt; History, and</li>
+<li>You see <strong>fresh or empty content</strong> in the Upcoming page,</li>
+</ul>
+<p>then your newsletter was successfully <strong>generated and delivered</strong> to your mail server.<br>
+The system received a “delivered” confirmation, meaning the email left our servers and reached yours.</p>
+<p>If you still don’t see it in your inbox, it’s likely being <strong>filtered, quarantined, or redirected</strong> internally.</p>
+<h6>2. Check Internal Mail Security Settings</h6>
+<p>When you’re sending from your <strong>own domain</strong>, your organization’s mail security may flag newsletters that appear to come “from you” but are technically sent <strong>through a new vendor (rasa.io)</strong>.</p>
+<p>This is one of the <strong>most common reasons</strong> newsletters don’t appear in the sender’s own inbox.<br>
+Your IT system may think:</p>
+<blockquote>
+<p>“This email looks like it’s from our domain, but it wasn’t sent from our internal mail server — it could be spam.”</p>
+</blockquote>
+<p>Even if your domain is properly <strong>authenticated</strong> (with SPF, DKIM, and DMARC records in place), internal filters can still block or quarantine your newsletters until the system recognizes rasa.io as a safe sender.</p>
+<blockquote>
+<p>✅ <strong>Tip:</strong> Ask your IT or security team to whitelist rasa.io’s sending IPs and domains, so mail from your authenticated domain is fully trusted.</p>
+</blockquote>
+<h6>3. It’s Not Usually a Deliverability Problem for Subscribers</h6>
+<p>If your newsletter is generating successfully but only <strong>you</strong> (or internal team members) aren’t receiving it, it doesn’t mean your subscribers are having the same issue.</p>
+<p>These internal filtering conflicts are specific to:</p>
+<ul>
+<li>Company networks</li>
+<li>Internal mail security systems</li>
+<li>Organizational spam policies</li>
+</ul>
+<p>Your <strong>external subscribers</strong> are almost always still receiving the newsletter normally.</p>
+<h6>4. Other Quick Things to Check</h6>
+<ul>
+<li><strong>Check your spam or junk folder</strong> — especially for the first few sends from a new or authenticated domain.</li>
+<li><strong>Mark the newsletter as safe</strong> or move it to your primary inbox if found.</li>
+<li><strong>Add your “From” address to your contacts or safe senders list.</strong></li>
+<li><strong>Ask IT</strong> to review or release any messages quarantined under your company’s spam policy.</li>
+</ul>
+<hr>
+<h6>5. If You’re Still Not Seeing ItIf you’ve checked your inbox, spam, and internal filters but the issue persists:</h6>
+<ul>
+<li>Confirm that your contact is <strong>still subscribed</strong> under <strong>Contacts &gt; Unsubscribed</strong>.</li>
+<li>If your contact status looks correct and the newsletter appears delivered,<br>
+  contact <strong>support@rasa.io</strong> with your send date and any delivery details you can provide.</li>
+</ul></div>
+    <nav class="article-nav"><a href="general--why-didnt-my-newsletter-send.html"><div class="label">← Previous</div><div class="title">Why didn&#39;t my newsletter send?</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

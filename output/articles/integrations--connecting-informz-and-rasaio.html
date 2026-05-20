@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting Informz and rasa.io · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>Connecting Informz and rasa.io</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Connecting Informz and rasa.io</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/connecting-informz-and-rasa.io" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">Informz</span></div>
+    </header>
+    <div class="article-body"><p><em>This page provides step-by-step instructions for integrating your Informz account with rasa.io to synchronize your contact list effectively.</em></p>
+<h6>Important First Step: Whitelist Our IP Addresses</h6>
+<p>Before you begin integrating <strong>rasa with Informz</strong>, please ensure that you whitelist our IP addresses. This is required so the integration can function properly without being blocked by your firewall or security settings.</p>
+<p><strong>You can find the list of IP addresses by clicking on <a href="https://help.rasa.io/ip-addresses">this article link</a> and using the IP addresses listed under the "Integrations" section.</strong></p>
+<h6>Required Information for Integration</h6>
+<p>To successfully connect Informz with rasa.io, you will need to provide the following details from your Informz account:</p>
+<ul>
+<li><strong>Brand ID</strong> (also known as Tenant ID)</li>
+<li><strong>Username</strong></li>
+<li><strong>Password</strong></li>
+<li><strong>Encryption Key</strong></li>
+<li><strong>Interests</strong></li>
+</ul>
+<hr>
+<h6>Locating the Brand ID (Tenant ID) and Encryption Key</h6>
+<ul>
+<li>The <strong>Brand ID</strong> is also known as the <strong>Tenant ID</strong> and can be found in your Informz dashboard.</li>
+<li>It is located above the <strong>Account Number</strong> under the user icon in the top right corner of the screen.</li>
+<li>The Encryption Key can be found in Settings &gt; System Settings &gt; Informz API Configuration <img alt="image-1" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/image-1.png"></li>
+</ul>
+<h6>Finding the Interests</h6>
+<ul>
+<li><strong>Interests</strong> correspond to the Target Group Name in Informz and represent the list of contacts you want to sync.</li>
+<li>To locate the <strong>Interests</strong>:<br>
+  1. Go to <strong>Target Groups</strong> in the Informz dashboard.<br>
+  2. Find the <strong>Target Group Name</strong> that has a <strong>Type of Interests</strong> and note the count of contacts associated with it.</li>
+</ul>
+<hr>
+<h6>Enabling the Rest API in Informz</h6>
+<p>To use the integration, you may need to enable the Rest API on your Informz account. Follow these steps if the API is not already enabled:</p>
+<ol>
+<li><strong>Submit a Support Case to Higher Logic</strong>:</li>
+</ol>
+<ul>
+<li>Go to <a href="https://support.higherlogic.com/">Higher Logic Support</a>.</li>
+<li>
+<p>Create a support case with the following details:</p>
+<ul>
+<li><strong>Informz Account Number</strong></li>
+<li><strong>Brand ID</strong> (Tenant ID)<br>
+2. <strong>Request API Enablement</strong>:</li>
+</ul>
+</li>
+<li>
+<p>Ask Higher Logic Support to enable the Rest API for your account.</p>
+</li>
+<li>
+<p>Mention that you are <strong>not changing AMSs</strong> but simply adding rasa.io, which may expedite the request.<br>
+3. <strong>Provide rasa.io IP Addresses</strong>:</p>
+</li>
+<li>
+<p>Ensure the necessary rasa.io IP addresses are whitelisted as part of your API request.</p>
+</li>
+</ul>
+<h6>Creating an API User Account</h6>
+<p>Once the Rest API is enabled:</p>
+<ol>
+<li>Create a new user account in Informz specifically for the integration.</li>
+<li>Assign <strong>Administrator level permissions</strong> to this user to ensure all required API calls can be made.<br>
+   - Note: While Administrator permissions are highly recommended for ease of integration, check with your team to confirm if this is a strict requirement or a helpful suggestion.</li>
+</ol>
+<hr>
+<h6>Authentication in rasa.io</h6>
+<p>After setting up your Informz account and user permissions, enter the following information into the rasa.io integration settings:</p>
+<ul>
+<li><strong>Brand ID (Tenant ID)</strong></li>
+<li><strong>Username</strong></li>
+<li><strong>Password</strong></li>
+<li><strong>Encryption Key</strong></li>
+<li><strong>Interests (Target Group Name)</strong></li>
+</ul></div>
+    <nav class="article-nav"><a class="next" href="integrations--enterprise-only-ftp-sftp-ftps-integration-documentation.html"><div class="label">Next →</div><div class="title">[ENTERPRISE ONLY] FTP / SFTP / FTPS Integration Documentation</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

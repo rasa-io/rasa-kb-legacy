@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Understanding RSS Feed Requirements · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link active" href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/content.html">Content</a>
+    <span class="sep">/</span><span>Understanding RSS Feed Requirements</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Understanding RSS Feed Requirements</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/content.html">Content</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/understanding-rss-feed-requirements" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">RSS feed</span></div>
+    </header>
+    <div class="article-body"><p><em>RSS (Really Simple Syndication) feeds allow rasa.io to access updated content automatically for newsletters. Each RSS feed uses a specific XML-based format to ensure that content can be properly interpreted and displayed.</em></p>
+<p>rasa.io uses RSS feeds to automatically pull in content for upcoming newsletters. To pull content in as expected, RSS feeds need to be formatted so that rasa.io can access the content link, source, title, description, image, tags, and publication date.</p>
+<h6>Required Elements of an RSS Feed</h6>
+<h6>1. <strong>Root Element: <code>&lt;rss&gt;</code></strong></h6>
+<ul>
+<li>The root of the RSS document is an <code>&lt;rss&gt;</code> tag with an attribute specifying the version. For example:</li>
+</ul>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;rss version="2.0"&gt;  
+   ...  
+  &lt;/rss&gt;</code></p>
+<h6>2. <strong>Channel Information: <code>&lt;channel&gt;</code></strong></h6>
+<ul>
+<li>The <code>&lt;channel&gt;</code> element is a container for all information about the feed. This element must include the following child elements:</li>
+<li>
+<p><strong>Title</strong> (<code>&lt;title&gt;</code>): The name of the feed.</p>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;title&gt;Example News Feed&lt;/title&gt;</code><br>
+  - <strong>Link</strong> (<code>&lt;link&gt;</code>): A URL linking to the site or the feed’s main page.</p>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;link&gt;https://www.example.com&lt;/link&gt;</code><br>
+  - <strong>Description</strong> (<code>&lt;description&gt;</code>): A short description of the feed's purpose or content.</p>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;description&gt;Latest updates and news from Example.&lt;/description&gt;</code><br>
+  - <strong>Language</strong> (<code>&lt;language&gt;</code>): The language of the feed, typically in ISO-639 format.</p>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;language&gt;en-us&lt;/language&gt;</code></p>
+</li>
+</ul>
+<h6>3. <strong>Items within the Channel: <code>&lt;item&gt;</code></strong></h6>
+<ul>
+<li>
+<p>Each <code>&lt;channel&gt;</code> must contain one or more <code>&lt;item&gt;</code> elements, representing individual articles, blog posts, or updates. Each <code>&lt;item&gt;</code> element can contain the following sub-elements:</p>
+</li>
+<li>
+<p><strong>Title</strong> (<code>&lt;title&gt;</code>): The title of the article or update.</p>
+<p>xml</p>
+<p><code>&lt;title&gt;New Blog Post: Understanding RSS Feeds&lt;/title&gt;</code><br>
+  - <strong>Link</strong> (<code>&lt;link&gt;</code>): A URL linking directly to the full version of the content.</p>
+<p>xml</p>
+<p><code>&lt;link&gt;https://www.example.com/blog/rss-guide&lt;/link&gt;</code><br>
+  - <strong>Description</strong> (<code>&lt;description&gt;</code>): A brief summary or excerpt of the content.</p>
+<p>xml</p>
+<p><code>&lt;description&gt;This article explains the basics of creating and using RSS feeds.&lt;/description&gt;</code><br>
+  - <strong>Publication Date</strong> (<code>&lt;pubDate&gt;</code>): The publication date of the content, in RFC 822 format.</p>
+<p>xml</p>
+<p><code>&lt;pubDate&gt;Mon, 29 Oct 2024 12:00:00 GMT&lt;/pubDate&gt;</code><br>
+  - <strong>Unique Identifier</strong> (<code>&lt;guid&gt;</code>): A globally unique identifier for each item, which helps avoid duplication in feed readers.</p>
+<p>XML</p>
+<p><code>&lt;guid isPermaLink="false"&gt;urn:uuid:1234-5678-91011-121314&lt;/guid&gt;</code></p>
+<h3>Images within an Item</h3>
+<p>To include images in an RSS feed, you can use the following methods:</p>
+<ol>
+<li><strong><code>&lt;enclosure&gt;</code> Element</strong>: Allows you to link media files (like images, audio, or video).</li>
+</ol>
+<p>xml</p>
+<p><code>&lt;enclosure url="https://www.example.com/images/post-image.jpg" length="12345" type="image/jpeg" /&gt;</code><br>
+2. <strong>Using <code>&lt;media:content&gt;</code></strong>: If following the Media RSS specification, you can specify detailed metadata about media.</p>
+<p>xml</p>
+<p><code>&lt;media:content url="https://www.example.com/images/post-image.jpg" type="image/jpeg" /&gt;</code><br>
+  - <strong>Optional Elements</strong>: Additional elements like <code>&lt;author&gt;</code>, <code>&lt;category&gt;</code>, and <code>&lt;enclosure&gt;</code> can be included to provide more information about each item. For example:</p>
+<p>xmlCopy code</p>
+<p><code>&lt;author&gt;author@example.com (John Doe)&lt;/author&gt;  
+&lt;category&gt;Technology&lt;/category&gt;  
+&lt;enclosure url="https://www.example.com/podcast.mp3" length="12345" type="audio/mpeg" /&gt;</code></p>
+</li>
+</ul>
+<h6>The items within the channel are what need to be included in a feed for rasa.io to properly pull in content and the appropriate metadata.</h6>
+<p>The title gives us the title of the article.</p>
+<p>The description gives us the description of the article.</p>
+<p>The link gives us where the article should link out to.</p>
+<p>The publication date provides a date on the upcoming page and also validates whether the content has been published since the last send and should be pulled in.</p>
+<p>We do not need the unique identifier but it is preferred. The same goes for the category as that allows us to assign topical tags based on the category in the feed.</p>
+<h6>Best Practices for a Properly Functioning RSS Feed</h6>
+<ol>
+<li><strong>Ensure Valid XML Structure</strong>: All tags must open and close properly. Use an XML validator to check your feed.</li>
+<li><strong>Adhere to RSS Specification</strong>: Follow the standard elements and attributes as defined in the <a href="https://www.rssboard.org/rss-specification#hrelementsOfLtitemgt">RSS 2.0 Specification</a> to avoid compatibility issues.</li>
+<li><strong>Use Proper Date Formats</strong>: Ensure that dates are formatted correctly (e.g., RFC 822 for <code>&lt;pubDate&gt;</code>).</li>
+<li><strong>Provide Unique Identifiers</strong>: Use unique <code>&lt;guid&gt;</code> values to prevent duplicate content in readers.</li>
+<li><strong>Test with RSS Validators and Aggregators</strong>: Verify your feed using online RSS validators and test it in popular feed readers to ensure correct parsing.</li>
+</ol>
+<h6>Common Issues to Avoid</h6>
+<ul>
+<li><strong>Missing or Incorrect Required Elements</strong>: Missing a <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, or <code>&lt;description&gt;</code> element can cause the feed to fail or display improperly.</li>
+<li><strong>Improper Tag Nesting</strong>: Make sure all tags are nested correctly within <code>&lt;rss&gt;</code> → <code>&lt;channel&gt;</code> → <code>&lt;item&gt;</code>.</li>
+<li><strong>Non-standard or Unsupported Tags</strong>: Custom tags like <code>&lt;mainimage&gt;</code> may not be recognized by rasa.io.</li>
+</ul>
+<p>By following these guidelines and adhering to the RSS 2.0 specification, you can ensure your RSS feed can be pulled in properly by rasa.io</p></div>
+    <nav class="article-nav"><a href="content--t-rex.html"><div class="label">← Previous</div><div class="title">t-rex</div></a><a class="next" href="content--using-gated-or-subscription-only-sites-as-sources.html"><div class="label">Next →</div><div class="title">Using gated or &quot;subscription only&quot; sites as Sources</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

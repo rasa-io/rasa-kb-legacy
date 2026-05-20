@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iMIS Integration Documentation · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>iMIS Integration Documentation</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>iMIS Integration Documentation</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/imis-integration-documentation" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">contacts</span><span class="kw">integrations</span><span class="kw">imis</span><span class="kw">imis integration</span><span class="kw">API endpoint</span><span class="kw">IQA QueryName</span><span class="kw">one-way integration</span><span class="kw">integration dashboard</span><span class="kw">contact management</span><span class="kw">iMIS EMS</span></div>
+    </header>
+    <div class="article-body"><p><em>Our step-by-step guide to integrating your contacts with iMIS. Note: This is a one way integration.</em></p>
+<h6>Required Information</h6>
+<p>Before proceeding, ensure you have the following information from your iMIS system:</p>
+<ol>
+<li><strong>API Endpoint</strong>: This is the URL for accessing the iMIS API.</li>
+<li><strong>IQA QueryName</strong>: The specific IQA query you wish to run, such as <code>$/Common/Queries/Search/Contact</code>.</li>
+<li><strong>Note</strong>: Include member ID in the IQA</li>
+<li><strong>Username</strong>: Your iMIS username.</li>
+<li><strong>Password</strong>: Your iMIS password.</li>
+</ol>
+<h6>Integration Steps</h6>
+<ol>
+<li><strong>Accessing the Integration Dashboard</strong></li>
+</ol>
+<ul>
+<li>Navigate to the rasa.io integration dashboard.</li>
+<li>
+<p>Locate the iMIS integration section.<br>
+2. <strong>Entering Required Information</strong></p>
+</li>
+<li>
+<p><strong>API Endpoint</strong>: Enter your iMIS API endpoint URL.</p>
+<ul>
+<li>Example: <code>https://yourimiswebsite.org/api/endpoint</code></li>
+</ul>
+</li>
+<li><strong>IQA QueryName</strong>: Enter the IQA QueryName.<ul>
+<li>Example: <code>$/Common/Queries/Search/Contact</code></li>
+</ul>
+</li>
+<li><strong>Username</strong>: Enter your iMIS username.</li>
+<li><strong>Password</strong>: Enter your iMIS password.<br>
+3. <strong>Authenticate</strong></li>
+</ul>
+<h6>Special Instructions for iMIS EMS and Earlier Versions</h6>
+<p>For users on earlier versions of iMIS and not on iMIS EMS, the endpoint format includes the instance name. The format is as follows:</p>
+<ul>
+<li><strong>Endpoint Format</strong>: <code>URL/instance name/api/endpoint</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul>
+<li>If your public iMIS website URL is <code>https://abc.org</code> and the website instance name is <code>abcmembers</code>, to call the party endpoint, the full API URL would be:</li>
+<li><code>https://abc.org/abcmembers/api/party</code></li>
+</ul>
+<h6>Troubleshooting</h6>
+<ul>
+<li>Ensure that all fields are filled out correctly.</li>
+<li>Double-check the endpoint URL format for your specific version of iMIS.</li>
+<li>Verify that your IQA QueryName is accurate and correctly formatted.</li>
+</ul>
+<p>If you encounter any issues, please contact rasa.io support for further assistance.</p></div>
+    <nav class="article-nav"><a href="integrations--hubspot-integration-how-to-embed-rasaio-engagement-reports-inside-a-custom-hubspot-dashboard.html"><div class="label">← Previous</div><div class="title">HubSpot Integration: How to embed rasa.io engagement reports inside a custom HubSpot dashboard</div></a><a class="next" href="integrations--salesforce-integration-documentation.html"><div class="label">Next →</div><div class="title">Salesforce Integration Documentation</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

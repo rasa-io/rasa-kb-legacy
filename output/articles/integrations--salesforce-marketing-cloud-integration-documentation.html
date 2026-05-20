@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salesforce Marketing Cloud Integration Documentation · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>Salesforce Marketing Cloud Integration Documentation</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Salesforce Marketing Cloud Integration Documentation</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/salesforce-marketing-cloud-integration-documentation" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">salesforce integration</span><span class="kw">syncing contacts</span><span class="kw">CRM integration</span></div>
+    </header>
+    <div class="article-body"><p><em>Our Salesforce Marketing Cloud (SFMC) integration allows you to connect your SFMC data to rasa.io for a daily sync that helps identify which contacts should receive newsletters.</em></p>
+<h6>How the Integration Works</h6>
+<p>Once connected, rasa.io will perform a one-way sync with Salesforce Marketing Cloud daily. This sync checks the audience information based on your specified criteria and updates the newsletter recipient list accordingly.</p>
+<h6>Required Information to Connect</h6>
+<p>To connect your Salesforce Marketing Cloud account with rasa.io, you will need the following:</p>
+<ol>
+<li><strong>Client ID</strong> (Required):<br>
+   You can find your Client ID in Salesforce Marketing Cloud by navigating to <strong>Setup &gt; Apps &gt; Installed Packages</strong>. Click on the package you want to use, and under <strong>API Integration &gt; Components</strong>, locate your <strong>Client ID</strong>.</li>
+<li><strong>Client Secret</strong> (Required):<br>
+   The <strong>Client Secret</strong> is located in the same section as the Client ID. Navigate to <strong>Setup &gt; Apps &gt; Installed Packages</strong>, select your package, and find the <strong>Client Secret</strong> under <strong>API Integration &gt; Components</strong>.</li>
+<li><strong>Account ID</strong> (Required):<br>
+   Your Account ID, also known as the <strong>MID (Member ID)</strong>, is visible in the top right corner of the Salesforce Marketing Cloud interface when you log in. You can also find it by navigating to <strong>Admin &gt; Account Settings</strong>.</li>
+<li><strong>Subdomain</strong> (Required):<br>
+   The <strong>Subdomain</strong> is part of your SFMC instance URL. For example, if your SFMC URL is <code>https://mcsubdomain.exacttarget.com</code>, then <code>mcsubdomain</code> is your subdomain. To verify, navigate to <strong>Setup &gt; Administration &gt; Account Settings</strong>, where your instance URL should be displayed.</li>
+<li><strong>Data Extension Key / Audience Key</strong> (Required):<br>
+   To find the Data Extension Key, go to <strong>Email Studio &gt; Subscribers &gt; Data Extensions</strong>. Select the Data Extension you wish to use, and the <strong>Data Extension Key</strong> will be displayed in the properties panel. This key uniquely identifies the Data Extension and is essential for the integration.</li>
+</ol>
+<h6>Quick Tip</h6>
+<p>The Salesforce Marketing Cloud integration is a one-way sync, meaning that rasa.io will only receive data from SFMC and will not push updates back to your Salesforce account.</p>
+<h6>Setting Up the Integration</h6>
+<ol>
+<li><strong>Navigate to Contacts &gt; Import &gt; Import from third party applications</strong>  in your rasa.io dashboard.</li>
+<li><strong>Select Salesforce Marketing Cloud</strong> from the list of available integrations.</li>
+<li><strong>Fill in the required fields</strong> listed above. Make sure all information is accurate to ensure a successful connection.</li>
+<li><strong>Save</strong> your settings to activate the sync.</li>
+</ol>
+<h6>Troubleshooting</h6>
+<ul>
+<li><strong>Invalid Credentials</strong>: Double-check your Client ID, Client Secret, and Account ID. Ensure there are no extra spaces or incorrect characters.</li>
+<li><strong>Missing Data</strong>: Ensure the Data Extension Key/Audience Key matches the exact key in SFMC. If the key doesn’t match, the sync may fail.</li>
+<li><strong>Subdomain Issues</strong>: Ensure the correct subdomain is entered as it appears in your SFMC URL.</li>
+</ul>
+<p>For any issues that persist, please reach out to our support team with the details of the error message you encounter.</p></div>
+    <nav class="article-nav"><a href="integrations--salesforce-integration-documentation.html"><div class="label">← Previous</div><div class="title">Salesforce Integration Documentation</div></a><a class="next" href="integrations--yourmembership-integration-documentation.html"><div class="label">Next →</div><div class="title">YourMembership Integration Documentation</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

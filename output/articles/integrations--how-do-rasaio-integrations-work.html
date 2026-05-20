@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How do rasa.io integrations work? · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>How do rasa.io integrations work?</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>How do rasa.io integrations work?</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/how-do-rasa.io-integrations-work" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">integrations</span><span class="kw">Mailchimp</span><span class="kw">hubspot integration</span><span class="kw">one-way integration</span><span class="kw">salesforce integration</span><span class="kw">native integrations</span><span class="kw">content integrations</span><span class="kw">two-way sync</span><span class="kw">ActiveCampaign</span><span class="kw">CRM integration</span><span class="kw">integration key</span><span class="kw">zapier</span></div>
+    </header>
+    <div class="article-body"><p>rasa.io supports a variety of native <a href="https://dashboard.rasa.io/settings/integrations">integrations</a>. Most of our integrations are related to newsletter subscriber management but we also have several content integrations.</p>
+<p>Here is our current list of available integrations:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ActiveCampaign</strong></td>
+<td><strong>Constant Contact</strong></td>
+<td><strong>Deskera</strong></td>
+<td><strong>HubSpot - Rich</strong></td>
+<td><strong>Keap</strong></td>
+</tr>
+<tr>
+<td><strong>Integrately</strong></td>
+<td><strong>Klaviyo</strong></td>
+<td><strong>Mailchimp</strong></td>
+<td><strong>Pabbly</strong></td>
+<td><strong>Pipedream</strong></td>
+</tr>
+<tr>
+<td><strong>Replug</strong></td>
+<td><strong>Salesflare</strong></td>
+<td><strong>SendFox</strong></td>
+<td><strong>Stripe</strong></td>
+<td><strong>SyncSpider</strong></td>
+</tr>
+<tr>
+<td><strong>Zoom</strong></td>
+<td><strong>Zapier</strong></td>
+<td><strong>Fonteva</strong></td>
+<td><strong>Magnet Mail</strong></td>
+<td><strong>iMIS</strong></td>
+</tr>
+<tr>
+<td><strong>LinkedIn</strong></td>
+<td><strong>Nimble</strong></td>
+<td><strong>Salesforce - Rich</strong></td>
+<td><strong>YourMembership</strong></td>
+<td><strong>Impexium</strong></td>
+</tr>
+<tr>
+<td><strong>Informz</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Below are some additional details regarding each integration.  All integration syncs run daily.</p>
+<p>1-way sync transfers data in a single direction, while 2-way sync allows bidirectional data transfer. In contacts management, 1-way sync means changes in one system don't affect the other, whereas 2-way sync ensures updates are reflected in both systems.</p>
+<p><img alt="" src=""></p>
+<p><img alt="" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/Knowledge%20Base%20Import/upload.wikimedia.orgwikipediacommonsthumb33fHubSpot_Logo.svg220px-HubSpot_Logo.svg.png"></p>
+<p>The HubSpot integration is a two-way sync. You can only sync 1 set of contacts from HubSpot to your rasa.io account. To do so, those contacts need to be part of the same List or Subscription Type. To sync all contacts, create an all-contact List in HubSpot.<br>
+The sync can be one-way if desired.</p>
+<p>We also have a rich HubSpot integration available for those on Pro and Enterprise plans. To learn more about it, please visit <a href="https://help.rasa.io/hubspot-integration-documentation">this page</a>.</p>
+<p><img alt="" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/Knowledge%20Base%20Import/upload.wikimedia.orgwikipediaenthumb772Mailchimp_logo.svg220px-Mailchimp_logo.svg.png"></p>
+<p>The Mailchimp integration is a two-way sync. Please know that you can only sync 1 Audience from Mailchimp. If you would like to combine Audiences, create a custom Audience in Mailchimp then sync that Audience to your rasa.io account.<br>
+The sync can be one-way if desired.</p>
+<p><img alt="Salesforce.com_logo.svg" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/Salesforce.com_logo.svg.png"></p>
+<p>The SalesForce integration is a two-way sync but requires an ‘OptedOutRasa__c’ custom field for the two-way sync. All of your Salesforce contacts will sync UNLESS you create a custom (boolean) field named "RasaNewsletter__c" in Salesforce and check its box on each contact you want to sync with your rasa.io account.</p>
+<p>The sync can be one-way if desired.</p>
+<p>We also have a rich Salesforce integration available for those on Pro and Enterprise plans. To learn more about it, please visit <a href="https://help.rasa.io/salesforce-integration-documentation">this page</a>.</p>
+<p>*Creating a custom field in SalesForce:</p>
+<p><img alt="salesforce integration custom field" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/salesforce%20integration%20custom%20field.png"></p>
+<p><img alt="" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/Knowledge%20Base%20Import/upload.wikimedia.orgwikipediacommonsthumbffdZapier_logo.svg250px-Zapier_logo.svg.png"></p>
+<p><a href="https://zapier.com/apps/rasaio/integrations">You can access the rasa.io Zap via the Zapier app library</a>. You can generate the integration key you will need to begin Zapping between rasa.io and your other applications via the integrations page and clicking Zapier, to generate a key. Using Zapier, you can add new subscribers that come into your CRM to rasa.io. You can also bring open, click, and topic data from rasa.io into your CRM.</p>
+<p><img alt="" src=""> <img alt="" src="https://getvoip.com/uploads/keap-logo-700x340.png"></p>
+<p>The integration between Keap and rasa.io is one-way. When you integrate your Infusionsoft account, you will import all customers from Infusionsoft with an email address that is opted in for marketing emails into rasa.io.</p>
+<p><img alt="download (2)" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/download%20(2).png"></p>
+<p>The integration between SendFox and rasa.io is one-way. You can only sync 1 list from SendFox to your rasa.io account. To sync all contacts, create an all-contact List in SendFox.</p>
+<p><img alt="" src="https://financesonline.com/uploads/2019/12/Salesflare-Logo-3.png"></p>
+<p>The integration between Salesflare and rasa.io is one-way. When you integrate your Salesflare account, you will import all customers from Salesflare with an email address that is opted in for marketing emails into rasa.io.</p>
+<p><img alt="download (4)" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/download%20(4).png"><img alt="" src=""></p>
+<p>The Integration between Deskera and rasa.io is one-way. When you integrate your Deskera account, you will import all of your customers from Deskera that are opted in for marketing emails, unless you create a custom "<em>RasaNewsletter__c"</em>field with a value of 0 to exclude and 1 to include. This will create a custom list of customers to import to rasa.io.</p>
+<p><img alt="" src=""><img alt="Stripe_logo,_revised_2016" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/Stripe_logo%2c_revised_2016.png"></p>
+<p>The integration between rasa.io and Stripe is one-way. When you integrate your Stripe account, you will import all customers from your Stripe site with an email address.</p>
+<p><img alt="" src=""></p>
+<p><img alt="" src=""><img alt="replug_logo_black_text" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/replug_logo_black_text.png"></p>
+<p>The integration between replug and rasa.io allows for custom short-form URLs. When you integrate your replug account, all articles will be linked in their replug short-form URL rather than the original form.</p>
+<p><img alt="activecampaign-1" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/activecampaign-1.svg"></p>
+<p>The integration between rasa.io and ActiveCampaign is one-way. When you integrate your ActiveCampaign account, you will import all customers from ActiveCampaign with an email address that is opted in for marketing emails into rasa.io.</p>
+<p><img alt="" src=""></p>
+<p><img alt="download" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/download.png"></p>
+<p>You can find rasa.io in the SyncSpider app library. You can generate the integration key you will need to integrate between rasa.io and your other applications via the integrations page and by clicking the SyncSpider, then generate a key. Using SyncSpider, you can add new subscribers that come into your CRM to rasa.io. You can also bring open, click, and topic data from rasa.io into your CRM.</p>
+<p><img alt="open-uri20210108-68-1ncp24r" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/open-uri20210108-68-1ncp24r.png"></p>
+<p>You can generate the integration key you will need to integrate between rasa.io and Pipedream via the integrations page and click Pipedream, then generate a key. Using Pipedream, you can add new subscribers that come into your CRM to rasa.io. You can also bring open, click, and topic data from rasa.io into your CRM.<img alt="" src=""></p>
+<p><img alt="pabblyconnect_logo-323b23b7378b865464f570aeb9383488ee36477996233653e0575c0151aa7c54" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/pabblyconnect_logo-323b23b7378b865464f570aeb9383488ee36477996233653e0575c0151aa7c54.png"></p>
+<p>You can generate the integration key you will need to integrate between rasa.io and Pabbly via the integrations page and click Pabbly, then generate a key. Using Pabbly, you can add new subscribers that come into your CRM to rasa.io. You can also bring open, click, and topic data from rasa.io into your CRM.</p>
+<p><img alt="" src="https://financesonline.com/uploads/2019/10/YourMembership-logo1.png"></p>
+<p>The integration between rasa.io and YourMembership is one-way. For detailed instructions on how to set up your integration, please visit <a href="https://help.rasa.io/yourmembership-integration-documentation">this page</a>.</p>
+<p><img alt="" src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2011-2019.png"></p>
+<p>The integration between rasa.io and LinkedIn is available to use as a source to provide content. To use LinkedIn, it must be your organization's account. You can log in to your company's LinkedIn page <a href="https://dashboard.rasa.io/settings/integrations/config?systemName=LinkedIn&amp;displayName=LinkedIn">here</a> to use the integration. For more information about how sources work, please visit <a href="https://help.rasa.io/how-do-sources-work">this page</a>.</p>
+<p><img alt="The History of the Zoom Logo - Hatchwise" src="https://www.hatchwise.com/wp-content/uploads/2021/12/Screen-Shot-2021-12-03-at-8.16.14-AM.png"></p>
+<p>The integration between rasa.io and Zoom is available to use as a source to provide webinars for your newsletter. You can log in to your Zoom account <a href="https://dashboard.rasa.io/settings/integrations/config?systemName=Zoom&amp;displayName=Zoom">here</a> to use the integration. For more information about how the Zoom integration works, please visit <a href="https://help.rasa.io/zoom-integration-documentation">this page</a>.</p>
+<p><img alt="" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_28e0907ae7c6011628a215b97a187ca2/imis.png"></p>
+<p>The integration between rasa.io and iMIS is a one-way sync. The information needed to set up the integration is API Endpoint and IQA QueryName.</p>
+<p><strong>For more details on the API endpoint:</strong><br>
+Accessing the API endpoint</p>
+<p>For anyone on iMIS EMS (20.3, 20/20 Advance)<br>
+The API endpoint points to the ASI Scheduler. The endpoint format is: URL/api/endpoint<br>
+For example, your public iMIS website URL is <a href="https://abc.org/">https://abc.org</a>. To call the party endpoint, the full API URL is <a href="https://abc.org/api/party">https://abc.org/api/party</a>.<br>
+For anyone on an earlier version and not on iMIS EMS<br>
+The endpoint format is similar to the above but includes the instance name: URL/instance name/api/endpoint<br>
+For example, your public iMIS website URL is <a href="https://abc.org/">https://abc.org</a> and the website instance name is abcmembers. To call the party endpoint, the full API URL is <a href="https://abc.org/abcmembers/api/party">https://abc.org/abcmembers/api/party</a>.</p>
+<p>For the IQA QueryName, enter the IQA that returns to you the list of records that should be included in the newsletter distribution. Here is an example of an IQA: $/Rasa.io/Newsletter Integration Sync <strong>or</strong>$/RASA/Current_Active_Member</p>
+<p><img alt="CC_release_thumb" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/CC_release_thumb.png"></p>
+<p>The Constant Contact integration is a two-way sync. When you integrate your Constant Contact account, you can choose a list to sync into the rasa.io dashboard. Please visit <a href="https://knowledgebase.constantcontact.com/email-digital-marketing/articles/KnowledgeBase/31720-Create-and-Manage-Contact-Lists?lang=en_US">this page</a> for information about how to create and set up a list in Constant Contact.</p></div>
+    <nav class="article-nav"><a href="integrations--enterprise-only-ftp-sftp-ftps-integration-documentation.html"><div class="label">← Previous</div><div class="title">[ENTERPRISE ONLY] FTP / SFTP / FTPS Integration Documentation</div></a><a class="next" href="integrations--how-to-integrate-rasaio-with-growthzone.html"><div class="label">Next →</div><div class="title">How to Integrate rasa.io with GrowthZone</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

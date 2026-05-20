@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anti-Spam Email Requirements and Deliverability Considerations · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link active" href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/account.html">Account</a>
+    <span class="sep">/</span><span>Anti-Spam Email Requirements and Deliverability Considerations</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Anti-Spam Email Requirements and Deliverability Considerations</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/account.html">Account</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/anti-spam-email-requirements-and-deliverability-considerations" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">security</span><span class="kw">delivery</span><span class="kw">DMARC</span><span class="kw">Email</span><span class="kw">CNAME</span><span class="kw">domain authentication</span><span class="kw">deliverability</span><span class="kw">CAN-SPAM compliance</span><span class="kw">anti-spam requirements</span><span class="kw">anti-spam</span><span class="kw">CAN-SPAM</span><span class="kw">email compliance</span><span class="kw">sender reputation</span><span class="kw">opt-out requests</span><span class="kw">spam traps</span><span class="kw">international email laws</span><span class="kw">subscriber rights</span><span class="kw">rasa.io compliance</span></div>
+    </header>
+    <div class="article-body"><p>At rasa.io, we take anti-spam email requirements and compliance with the CAN-SPAM law seriously. Failure to comply with anti-spam requirements can have an impact on your reputation and even impact other rasa.io users. In this article, you will learn about how CAN-SPAM relates to your newsletter and about some other email deliverability considerations.</p>
+<p>What is the CAN-SPAM Act?</p>
+<p>This law sets the rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have you stop emailing them, and spells out tough penalties for violations, according to the Federal Trade Commission of the United States. In order to comply with the act, there are seven requirements for all of your commercial email messages:</p>
+<ol>
+<li>Don’t use false or misleading header information.</li>
+<li>Don’t use deceptive subject lines.</li>
+<li>Identify the message as an ad.</li>
+<li>Tell recipients where you’re located.</li>
+<li>Tell recipients how to opt out of receiving future emails from you.</li>
+<li>Honor opt-out requests promptly.</li>
+<li>Monitor what others are doing on your behalf.</li>
+</ol>
+<p>Anti-spam and Email Deliverability</p>
+<p>You might be wondering how these requirements impact your email's ability to get into a user's inbox. Abiding by ANTI-SPAM Act requirements certainly has a positive impact on your email deliverability, but there are many additional factors that impact deliverability as well. These factors might include, but are not necessarily limited to:</p>
+<ul>
+<li>Sender reputation, including sender IP address and overall domain reputation</li>
+<li>Email engagement metrics, including open, click, bounce, and spam report rates</li>
+<li>Bounce rates can be lowered by cleaning your email list and ensuring that the addresses you are sending to are still valid and able to reach the intended recipients</li>
+<li>Spam trap emails landing on your subscriber list, which are email addresses specifically developed to land on the lists of email-harvesters in order to catch spammy senders</li>
+<li>Domain authentication with rasa.io so that rasa.io can send on behalf of your organization email addresses - <a href="https://help.rasa.io/how-to-authenticate-your-domain">read about how to authenticate your domain with rasa.io</a></li>
+<li>Email branding that is consistent with your content around the web so that subscribers are familiar with your brand identity and they know who they are receiving emails from</li>
+<li>Relevant content within your emails; AI personalization can help with this</li>
+</ul>
+<p>International Requirements</p>
+<p>rasa.io is an organization operating within the United States, but depending on where your users reside, you might have to abide by additional international email send requirements. If your own organization is based outside of the U.S. or the people you are emailing primarily reside outside of the U.S., you will need to consider those respective international laws in your email campaigns.</p></div>
+    <nav class="article-nav"><a class="next" href="account--billing-updating-payment-invoice-history-and-more.html"><div class="label">Next →</div><div class="title">Billing: Updating Payment, Invoice History, and More</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

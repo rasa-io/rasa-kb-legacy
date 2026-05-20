@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<script>window.KB_ROOT = "";</script>
+</head>
+<body class="home">
+<header class="topbar">
+    <a href="index.html" class="brand">
+        <img src="assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link active" href="index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main home">
+        
+<section class="hero">
+    <h1>How can we help?</h1>
+    <p>Find answers, walkthroughs, and best practices for getting the most out of rasa.io.</p>
+    <div class="hero-search">
+        <input type="search" id="hero-search" placeholder="Search articles, features, topics…" autocomplete="off">
+        <div class="search-results" id="hero-search-results"></div>
+    </div>
+</section>
+<h2 style="margin: 8px 0 18px; font-size: 22px;">Browse by category</h2>
+<div class="cat-grid"><a class="cat-card" href="categories/account.html"><div class="icon">👤</div><h3>Account</h3><div class="count">9 articles</div></a><a class="cat-card" href="categories/analytics.html"><div class="icon">📊</div><h3>Analytics</h3><div class="count">16 articles</div></a><a class="cat-card" href="categories/contacts.html"><div class="icon">👥</div><h3>Contacts</h3><div class="count">13 articles</div></a><a class="cat-card" href="categories/content.html"><div class="icon">📰</div><h3>Content</h3><div class="count">36 articles</div></a><a class="cat-card" href="categories/dashboard-walkthrough-and-videos.html"><div class="icon">🎬</div><h3>Dashboard Walkthrough and Videos</h3><div class="count">2 articles</div></a><a class="cat-card" href="categories/design.html"><div class="icon">🎨</div><h3>Design</h3><div class="count">24 articles</div></a><a class="cat-card" href="categories/faqs.html"><div class="icon">❓</div><h3>FAQs</h3><div class="count">2 articles</div></a><a class="cat-card" href="categories/general.html"><div class="icon">📘</div><h3>General</h3><div class="count">23 articles</div></a><a class="cat-card" href="categories/integrations.html"><div class="icon">🔌</div><h3>Integrations</h3><div class="count">12 articles</div></a><a class="cat-card" href="categories/schedule.html"><div class="icon">📅</div><h3>Schedule</h3><div class="count">4 articles</div></a><a class="cat-card" href="categories/support.html"><div class="icon">💬</div><h3>Support</h3><div class="count">3 articles</div></a></div>
+<p style="margin-top: 32px; color: var(--muted); font-size: 14px;">
+    144 articles across 11 categories.
+</p>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

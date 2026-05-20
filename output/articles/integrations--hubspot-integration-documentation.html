@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HubSpot Integration Documentation · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>HubSpot Integration Documentation</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>HubSpot Integration Documentation</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/hubspot-integration-documentation" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">integrations</span><span class="kw">user engagement</span><span class="kw">hubspot</span><span class="kw">hubspot integration</span><span class="kw">contact selection</span><span class="kw">static list</span><span class="kw">dynamic list</span><span class="kw">subscription type</span><span class="kw">two-way integration</span><span class="kw">engagement data</span><span class="kw">real-time updates</span><span class="kw">custom contact fields</span><span class="kw">API integration</span><span class="kw">reporting dashboard</span><span class="kw">email marketing integration</span></div>
+    </header>
+    <div class="article-body"><h6>Contact Selection</h6>
+<p>rasa.io supports two methods of acquiring contacts from HubSpot:</p>
+<ul>
+<li>
+<p><strong>List</strong>: (static or dynamic): directly defining the contacts to include</p>
+</li>
+<li>
+<p><strong>Subscription Type:</strong> Select the subscription type that describes which contacts have opted in to receive mailings.</p>
+</li>
+</ul>
+<p>We <strong><em>highly</em></strong> recommend using List AND Subscription Type to sync your contacts from HubSpot. That is best practice.</p>
+<p>Think of the list of who is <strong>eligible</strong>to receive the newsletter and the subscription type as a way to identify that contact's <strong>preference</strong>(opted-in or out). The list basically keeps the contact in rasa so you can always look up how or why someone unsubscribed and see that audit trail whereas if you only use one method, as soon as they unsubscribe we'd take them out of rasa because they are no longer going to show as someone who should be included in HubSpot.</p>
+<p>Prior to integration, you should select your method of integration and establish the necessary data inside your HubSpot instance.</p>
+<h6>🧾 Quick Comparison Table</h6>
+<p>Compare the <strong>unsubscribe scenario</strong> across all three setups so you can see the differences clearly:</p>
+<table>
+<thead>
+<tr>
+<th>Sync Method</th>
+<th>HubSpot Subscription Updated?</th>
+<th>Contact stays visible in rasa.io?</th>
+<th>Best Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subscription Type only</strong></td>
+<td>✅ Yes</td>
+<td>❌ No (removed after sync)</td>
+<td>Pure preference tracking</td>
+</tr>
+<tr>
+<td><strong>List only</strong></td>
+<td>❌ No</td>
+<td>✅ Yes (marked unsubscribed)</td>
+<td>Audit-focused, not recommended alone</td>
+</tr>
+<tr>
+<td><strong>List + Subscription Type</strong></td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>✅ Best practice</td>
+</tr>
+</tbody>
+</table>
+<h6><strong>List</strong></h6>
+<p>When a List is selected for integration, rasa.io does not attempt to remove unsubscribed contacts from the list (as rasa.io has no insight into what attributes were used to build the list).  If 2-way integration is selected, a contact field will be updated to reflect that the user has unsubscribed, but that user will remain in the rasa.io platform as an unsubscribed user.</p>
+<p>When a contact is removed from the list (in HubSpot), that user will also be removed from the rasa dashboard.</p>
+<h6><strong>Subscription Type</strong></h6>
+<p>When a Subscription Type is selected for integration, when <a href="https://rasa.io">rasa.io</a> detects that a user should no longer receive a newsletter, the user will automatically opt out of the indicated subscription type. This will happen if any of the following occur:</p>
+<ul>
+<li>rasa.io receives a signal that the user has opted out of the newsletter</li>
+<li>rasa.io receives a permanent delivery failure report</li>
+<li>rasa.io receives a signal that the user has flagged the email as spam.</li>
+</ul>
+<p>When a contact has been opted out, they will subsequently be removed from the rasa.io dashboard, as they are no longer opted in.  This means that normally, you will only see recently unsubscribed contacts inside rasa.io.  When a nightly synchronization runs, those unsubscribed contacts will be removed.</p>
+<h6>Important Note on Subscribed Users</h6>
+<p>In addition to adding aList and Subscription Type, each contact must also have an assigned <strong>'legal basis'</strong> field in HubSpot. Without set legal basis field, the contact will not be considered a subscribed user and therefore will not be added to your subscribed audience in rasa.io.</p>
+<h6><strong>Contact Updates</strong></h6>
+<p>When selecting a “2-way” integration, rasa.io will update the following parameters inside of HubSpot.</p>
+<h6><strong>Reporting</strong></h6>
+<p>If your HubSpot plan allows you to create custom dashboards with external components, you can embed your engagement data inside HubSpot by using a custom URL.  For this, you will need a GUID, provided by your CS representative.</p>
+<p>There are 3 different forms of the URL which present the same data differently:</p>
+<ul>
+<li><a href="https://hubspot-ui.rasa.io/engagement/chart?c=e17e69fe-3b7b-120e-7d7f-9bbffba2ff0e">https://hubspot-ui.rasa.io/engagement/chart?c=</a> [guid]: Display a graph of opens and clicks</li>
+<li><a href="https://hubspot-ui.rasa.io/engagement/chart?c=e17e69fe-3b7b-120e-7d7f-9bbffba2ff0e">https://hubspot-ui.rasa.io/engagement/table?c=</a> [guid]: Display a opens and clicks data in a table</li>
+<li><a href="https://hubspot-ui.rasa.io/engagement/chart?c=e17e69fe-3b7b-120e-7d7f-9bbffba2ff0e">https://hubspot-ui.rasa.io/engagement?c=</a> [guid]: Display <em>both</em> the table and the chart</li>
+</ul>
+<p>Please check out <a href="https://app.hubspot.com/ecosystem/22539073/marketplace/apps/marketing/email/rasa-io-206230">HubSpot's article</a> about our integration and watch <a href="https://rasa.io/videos/rasa-io-hubspot-webinar/">this webinar</a> for more information!</p>
+<h6><strong>*Disclaimer:</strong> The information below is only applicable to users integrated with our HubSpot rich integration.</h6>
+<h6><strong>Contact Activity Timeline</strong></h6>
+<p>All rasa.io newsletter activities are recorded on the Activity Timeline for the Contact.</p>
+<ul>
+<li>Deliveries: A delivery event is recorded with the date/time of the delivery and the Subject Line.</li>
+<li>Opens: An open event is recorded with the date/time of the open and the Subject Line of the newsletter</li>
+<li>Clicks: A click event is recorded with the date/time of the click and the URL that was clicked on.</li>
+</ul>
+<h6><strong>Custom Contact Fields</strong></h6>
+<p>HubSpot contacts are updated with several attributes to provide insights into how a contact interacts with the rasa.io newsletter.</p>
+<h6><strong>Real-Time Updates</strong></h6>
+<p>These fields are populated in near-real time, as events happen</p>
+<p><strong>Last Article Click</strong>: The date/time of the last click on an article in the newsletter</p>
+<p><strong>Last Click</strong>: The date/time of the last click of any kind</p>
+<p><strong>Last Delivery</strong>: The date/time of the last newsletter delivery attempt</p>
+<p><strong>Last Delivery Status</strong>: The status of the last attempted delivery:</p>
+<ul>
+<li>Delivered: Successful delivery</li>
+<li>Dropped: Failed attempt to redelivery a previously Hard Bounced email address</li>
+<li>Soft Bounce: Temporary delivery failure.  Contact will remain subscribed.</li>
+<li>Hard Bounce: Permanent delivery failure.  Contact will be unsubscribed and future deliveries will not be attempted.</li>
+</ul>
+<p><strong>Last Open</strong>: The date/time of the last newsletter open</p>
+<h6>Daily Updates</h6>
+<p>These fields are updated on a daily basis</p>
+<p><strong>Click Count:</strong> The count of unique clicks from this contact</p>
+<p><strong>Open Count:</strong> The count of unique newsletter opens from this contact</p>
+<p><strong>Subscription Status:</strong> Describe whether this contact is subscribed (“Subscribed”), or if not - why not:</p>
+<ul>
+<li>API: Unsubscribed via an API integration update</li>
+<li>Unsubscribed: Unsubscribed by user choice/opt-out</li>
+<li>Bounce: Unsubscribed as a result of a delivery problem</li>
+</ul>
+<p><strong>Subscription Status Changed:</strong> The date/time that the Subscription Status field was updated</p>
+<h6>Weekly Updates</h6>
+<p>These fields are updated on a weekly basis</p>
+<p><strong>Categories</strong>: The top 10 user-specified tags for this contact.  The values are all separated by commas, to allow targeted queries and filtering.</p>
+<p><strong>Engagement Level</strong>: A numeric AI-generated measure of how engaged a user is.  Larger values indicate higher engagement.</p>
+<p><strong>Engagement Update</strong>: The date/time of the last update of the engagement level attribute</p>
+<p><strong>Topics</strong>: The AI-computed top 10 topics of interest for this contact.  The values are all separated by commas, to allow targeted queries and filtering.</p></div>
+    <nav class="article-nav"><a href="integrations--how-to-utilize-the-rich-hubspot-integration.html"><div class="label">← Previous</div><div class="title">How to Utilize the Rich HubSpot Integration</div></a><a class="next" href="integrations--hubspot-integration-how-to-embed-rasaio-engagement-reports-inside-a-custom-hubspot-dashboard.html"><div class="label">Next →</div><div class="title">HubSpot Integration: How to embed rasa.io engagement reports inside a custom HubSpot dashboard</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

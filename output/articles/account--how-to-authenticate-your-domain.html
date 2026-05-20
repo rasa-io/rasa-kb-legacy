@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How To Authenticate Your Domain · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link active" href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/account.html">Account</a>
+    <span class="sep">/</span><span>How To Authenticate Your Domain</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>How To Authenticate Your Domain</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/account.html">Account</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/how-to-authenticate-your-domain" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">CNAME</span><span class="kw">domain authentication</span><span class="kw">domain management</span><span class="kw">CNAME records</span><span class="kw">DNS host</span><span class="kw">domain setup</span><span class="kw">DNS configuration</span><span class="kw">email sending domain</span><span class="kw">verification process</span><span class="kw">common domain hosts</span><span class="kw">GoDaddy</span><span class="kw">WordPress</span><span class="kw">record verification</span></div>
+    </header>
+    <div class="article-body"><h6>Step 1: Open Domain Authentication</h6>
+<ol>
+<li>Log in to your rasa.io account.</li>
+<li>Go to <strong>Settings → <a href="https://dashboard.rasa.io/settings/domain">Domain Authentication</a></strong>.</li>
+</ol>
+<h6>settings</h6>
+<h6>Step 2: Generate DNS records</h6>
+<ol>
+<li>On the Domain Authentication page, enter your domain if prompted.</li>
+<li>You will see a <strong>“Generate Records” button</strong>.</li>
+</ol>
+<ul>
+<li>You should now see <strong>two sets of DNS records (six CNAME records in total)</strong>.</li>
+<li>You have the option to copy all records at once or individually copying the name and values one by one.</li>
+</ul>
+<p><img alt="all records" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/all%20records.png"></p>
+<p>🎥 <strong>Video guide:</strong> This video walks you through the domain authentication process step by step.<br>
+<em>Please note: the video shows the addition of three records, but you will now need to add six records in total in order to validate your domain.</em></p>
+<p><img alt="" src="https://fast.wistia.com/embed/medias/8v4g45cs2s/swatch"></p>
+<p><strong>Important:</strong> If you already have DNS records from a previous setup, <strong>do not remove them</strong>. Just add the new records in addition to the ones already in place.</p>
+<h6>Step 3: Add the records to your domain provider</h6>
+<ol>
+<li>Log in to your domain provider (the company where you purchased or manage your domain, such as GoDaddy, Google Domains, Namecheap, or Cloudflare).</li>
+<li>Locate the DNS settings or DNS management area.</li>
+<li>Add all six new CNAME records exactly as they appear in rasa.io.</li>
+</ol>
+<p>If you’re not sure who your domain provider is, you can:</p>
+<ul>
+<li>Reach out to your website developer, or</li>
+<li>Contact your IT team — they should know who manages your domain.</li>
+</ul>
+<p>If you do know your domain provider but don’t have login access, please forward these instructions to your IT team or the person who manages your website so they can complete the update for you.</p>
+<h6>Step 4: Validate your domain</h6>
+<ol>
+<li>After adding all records, return to rasa.io.</li>
+<li>On the Domain Authentication page, click <strong>Validate Domain</strong>.</li>
+</ol>
+<p><img alt="validate domain" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/validate%20domain.png"><br>
+3. If validation succeeds, your domain will be marked as authenticated and you will see that both sets of records display as "valid" and the message below pop up in your dashboard.</p>
+<p><img alt="valid" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/valid.png"></p>
+<p><img alt="domain validated" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/domain%20validated.png"></p>
+<h6>Step 5: Repeat for additional domains (if applicable)</h6>
+<p>If you have more than one domain, repeat these steps for each domain you want to use with rasa.io.</p>
+<p>👉 For more background on why domain authentication matters and the benefits of using a subdomain, see our <a href="https://help.rasa.io/overview-of-domain-authentication">Overview of Domain Authentication</a>.</p>
+<h6>Here are instructions for common domain hosts:</h6>
+<ul>
+<li><a href="https://www.godaddy.com/help/add-a-cname-record-19236#smhvid"><strong>Go Daddy</strong></a></li>
+<li><a href="https://en.support.wordpress.com/domains/custom-dns/"><strong>Word Press</strong></a></li>
+<li><strong><a href="https://my.bluehost.com/hosting/help/dns-management-add-edit-or-delete-dns-entries">Bluehost</a></strong></li>
+<li><strong><a href="https://www.hostgator.com/help/article/changing-mx-a-cname-records-plesk-10">HostGator</a></strong></li>
+<li><strong><a href="https://www.hostinger.com/how-to/how-can-i-manage-my-dns-records">Hostinger</a></strong></li>
+<li><strong><a href="https://www.domain.com/help/article/dns-management-how-to-update-cname-aliases">Domain.com</a></strong></li>
+<li><strong><a href="https://support.google.com/domains/answer/9211383?hl=en">Google Domains</a></strong></li>
+<li><a href="https://help.smallbusiness.yahoo.net/s/article/SLN17912"><strong>Yahoo</strong></a></li>
+<li><a href="https://knowledge.web.com/subjects/article/KA-01097/en-us"><strong>web.com</strong></a></li>
+<li><a href="http://www.networksolutions.com/support/cname-records-host-aliases/"><strong>Network Solutions</strong></a></li>
+<li><a href="https://www.name.com/support/articles/115004895548-Adding-a-CNAME-Record"><strong>name.com</strong></a></li>
+<li><a href="https://www.a2hosting.com/kb/cpanel/cpanel-domain-features/using-the-cpanel-zone-editor"><strong>A2 Hosting</strong></a></li>
+<li><a href="https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records-"><strong>DreamHost</strong></a></li>
+<li><strong><a href="https://www.ipage.com/help/article/dns-management-how-to-update-cname-aliases">iPage</a></strong></li>
+<li><a href="https://www.inmotionhosting.com/support/uncategorized/create-cname-record/"><strong>Inmotion Hosting</strong></a></li>
+<li><a href="https://www.webhostinghub.com/help/learn/domain-names/dns-nameserver/add-cname-record"><strong>Web Hosting Hub</strong></a></li>
+<li><a href="https://www.greengeeks.com/support/article/how-do-i-change-dns-for-mx-cname-and-a-records/"><strong>Green Geeks</strong></a></li>
+<li><strong><a href="https://www.ionos.com/help/domains/configuring-cname-records-for-subdomains/configuring-a-cname-record-for-a-subdomain/">1&amp;1</a></strong></li>
+<li><a href="https://support.wix.com/en/article/adding-dns-records-in-your-wix-account"><strong>Wix</strong></a></li>
+</ul></div>
+    <nav class="article-nav"><a href="account--how-do-i-change-the-name-of-my-newsletter.html"><div class="label">← Previous</div><div class="title">How do I change the name of my newsletter?</div></a><a class="next" href="account--in-app-notification-center-overview.html"><div class="label">Next →</div><div class="title">In-App Notification Center Overview</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

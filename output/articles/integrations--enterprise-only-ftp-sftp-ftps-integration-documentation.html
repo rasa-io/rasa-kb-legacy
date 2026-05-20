@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[ENTERPRISE ONLY] FTP / SFTP / FTPS Integration Documentation · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>[ENTERPRISE ONLY] FTP / SFTP / FTPS Integration Documentation</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>[ENTERPRISE ONLY] FTP / SFTP / FTPS Integration Documentation</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/enterprise-only-ftp-/-sftp-/-ftps-integration-documentation" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">contact management</span><span class="kw">FTP</span><span class="kw">SFTP</span><span class="kw">FTPS</span><span class="kw">subscriber list management</span><span class="kw">data synchronization</span><span class="kw">connection setup</span></div>
+    </header>
+    <div class="article-body"><p>Follow the steps below to set up and configure the integration using the FTP, SFTP, or FTPS methods.</p>
+<p><strong>Step 1: Obtain Your Credentials</strong></p>
+<p>To begin the integration process, you will need your FTP/SFTP/FTPS credentials from rasa.io. These credentials include the following information:</p>
+<ul>
+<li><strong>Hostname/Server Address:</strong> ftp.rasa.io</li>
+<li><strong>Username:</strong> [YourUsername]</li>
+<li><strong>Password:</strong> [YourPassword]</li>
+</ul>
+<p><strong>Note for SFTP users:</strong> If you choose to use the SFTP method, please provide your Customer Success contact with your IP(s) to whitelist. You will not be able to connect using SFTP until this step is complete. <strong>Please keep this in mind if you switch or add new IP addresses, it could cause a disruption to your transfers.</strong></p>
+<p><strong>Step 2: Connect to ftp.rasa.io</strong></p>
+<p>Using your preferred FTP client, connect to rasa.io's server (ftp.rasa.io) using the provided credentials. Ensure that your connection is secure by choosing the appropriate protocol (FTP, SFTP, or FTPS) based on your preference and security requirements.</p>
+<p><strong>Step 3: Configure File Export</strong></p>
+<p>After successfully connecting to the rasa.io server, configure your file export settings within your CRM or AMS. Set up your subscriber list file to land in the designated folder created for you on the server. This folder is where rasa.io will retrieve the data for processing.</p>
+<p><strong>Step 4: Prepare Your Subscriber List</strong></p>
+<p>Your subscriber list should, at a minimum, include a column for email addresses. Additionally, you can include other fields such as first name, last name, and segment code (if utilizing rasa.io's segments feature). Ensure that your data is formatted correctly, and each column is labeled appropriately.</p>
+<p><strong>Step 5: Choose List Update Method</strong></p>
+<p>rasa.io offers two methods for updating your subscriber list:</p>
+<ul>
+<li><strong>Full List Replacement:</strong> Replace the entire list with the most recent version during each sync. <strong>Note:</strong> It is recommended to perform a full list replacement only if subscribes or unsubscribes are managed through a form hosted on your site.</li>
+<li><strong>Incremental Add/Update:</strong> Add new subscribers and update existing ones without replacing the entire list. This is a good option if rasa.io is housing your unsubscribe form / list.</li>
+</ul>
+<p><strong>Step 6: Schedule List Sync</strong></p>
+<p>Decide on the frequency of list synchronization. You can choose to sync the list every night or at a frequency that suits your needs, we will process the files overnight. Ensure that your sync schedule aligns with your data update frequency and list management practices.</p>
+<p><strong>Step 7 (OPTIONAL but highly recommended):</strong> <strong>Include Record Count File for Verification</strong></p>
+<p>To enhance the integrity of your synchronization process, it is recommended to include a record count file along with your subscriber list. This file provides a count of the records being transferred and serves as a verification mechanism. <strong>Including a record count file adds an extra layer of assurance, helping to maintain the accuracy and completeness of your subscriber list during each synchronization.</strong></p>
+<ul>
+<li><strong>Generate Record Count File:</strong> Before initiating the file transfer, generate a record count file that includes the total number of records in your subscriber list. This file should be a simple text document containing a single number, representing the count of records.</li>
+<li><strong>File Naming Convention:</strong> Name the record count file in a way that clearly associates it with the corresponding subscriber list file. For example, if your subscriber list file is named "subscriber_list.csv," name the record count file "subscriber_list_count.txt."</li>
+<li><strong>Placement in the Same Folder:</strong> Ensure that the record count file is placed in the same folder as your subscriber list file on the Rasa.io server. This facilitates easy retrieval and verification.</li>
+</ul>
+<p><strong>Verification Process:</strong></p>
+<p>During the synchronization process, rasa.io will check the received record count against the actual number of records in the subscriber list file. If, for any reason (e.g., connection drop, incomplete upload), the record count and the received file become mismatched, the system will void the sync. In such cases, rasa.io will default to the last successful import to prevent the potential issue of under-sending your newsletter to an incomplete list.</p>
+<p><strong>Pushing Data Back to Your System</strong></p>
+<p>Exciting news! We've recently enhanced our integration capabilities to allow for the seamless transfer of data back to your system. Now, not only can you effortlessly sync your subscriber lists to rasa.io, but you can also push data back to your CRM or AMS. This two-way data flow ensures that your systems stay updated with the latest subscriber information, providing a comprehensive solution for managing your audience.</p>
+<p>In the file we return to you, we can include any and all of the following data points for all subscribers:</p>
+<ul>
+<li>opt-outs</li>
+<li>open and click counts</li>
+<li>date of last open and click</li>
+<li>topical data</li>
+</ul>
+<p>If you encounter any issues or have further questions, please refer to the rasa.io support team at support@rasa.io or reach out to your dedicated Customer Success representative for assistance.</p></div>
+    <nav class="article-nav"><a href="integrations--connecting-informz-and-rasaio.html"><div class="label">← Previous</div><div class="title">Connecting Informz and rasa.io</div></a><a class="next" href="integrations--how-do-rasaio-integrations-work.html"><div class="label">Next →</div><div class="title">How do rasa.io integrations work?</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

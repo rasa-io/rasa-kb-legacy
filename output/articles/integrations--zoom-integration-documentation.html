@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoom Integration Documentation · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link active" href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/integrations.html">Integrations</a>
+    <span class="sep">/</span><span>Zoom Integration Documentation</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Zoom Integration Documentation</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/integrations.html">Integrations</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/zoom-integration-documentation" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">integrations</span><span class="kw">zoom</span><span class="kw">zoom integration</span><span class="kw">webinar data</span><span class="kw">event showcasing</span><span class="kw">upcoming content</span><span class="kw">add source</span><span class="kw">event details</span><span class="kw">newsletter content</span><span class="kw">webinar features</span></div>
+    </header>
+    <div class="article-body"><p><em>Your webinar strategy just got smarter.You can now seamlessly connect Zoom with rasa.io to automatically pull your webinars into your newsletter!</em></p>
+<p><strong>⚠️ This integration is available by request. If you'd like to enable it, please contact our Customer Success team at support@rasa.io.</strong></p>
+<h6><strong>Connecting rasa.io and Zoom</strong></h6>
+<ol>
+<li>Navigate to '<a href="https://dashboard-dev.rasa.io/content/addsource">Add Source</a>' or '<a href="https://dashboard-dev.rasa.io/settings/integrations">Integrations</a>'</li>
+</ol>
+<h6>###### ###### What Data Comes In from Zoom</h6>
+<p>When a webinar is synced from Zoom, rasa.io will import the following information:</p>
+<ul>
+<li><strong>Topic</strong> (webinar title)</li>
+<li><strong>Description</strong></li>
+<li><strong>Date &amp; Time</strong></li>
+<li><strong>Registration Link or Invitation Link</strong> (see note below)</li>
+<li><strong>Host</strong></li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Important:</strong> If you want to include a <strong>registration link</strong> in your newsletter, you must enable registration when creating the webinar in your Zoom settings. If registration is not required, rasa.io will instead use the invitation link.</p>
+</blockquote>
+<p>Note: Attributes added via Zoom’s Branding settings (such as custom images or logos) are not available via Zoom’s API. If you’d like to display images for your webinars, these must be manually uploaded in rasa.io.</p>
+<h6>Disconnecting Zoom and rasa.io</h6>
+<p><strong>Disconnecting from rasa.io</strong></p>
+<ol>
+<li>Navigate to '<a href="https://dashboard-dev.rasa.io/settings/integrations">Integrations</a>' and select Zoom Integration</li>
+<li>Click 'Disconnect'</li>
+</ol>
+<p><strong><img alt="" src="https://22539073.fs1.hubspotusercontent-na1.net/hubfs/22539073/image-png-Sep-30-2024-06-55-52-6788-PM.png"></strong></p>
+<p><strong>Disconnecting from Zoom</strong>  </p>
+<ol>
+<li>Log in to your Zoom Account and navigate to the Zoom App Marketplace.</li>
+<li>Click Manage &gt;&gt; Added Apps or search for the "rasa.io app for Zoom Integration" app.</li>
+<li>Click the "rasa.io app for Zoom Integration" app.</li>
+<li>Click Remove.</li>
+</ol></div>
+    <nav class="article-nav"><a href="integrations--yourmembership-integration-documentation.html"><div class="label">← Previous</div><div class="title">YourMembership Integration Documentation</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

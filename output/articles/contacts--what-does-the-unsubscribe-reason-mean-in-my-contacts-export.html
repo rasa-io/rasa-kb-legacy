@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What does the "Unsubscribe Reason" mean in my Contacts export? · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link active" href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/contacts.html">Contacts</a>
+    <span class="sep">/</span><span>What does the &quot;Unsubscribe Reason&quot; mean in my Contacts export?</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>What does the &quot;Unsubscribe Reason&quot; mean in my Contacts export?</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/contacts.html">Contacts</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/what-does-the-unsubscribe-reason-mean-in-my-contacts-export" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">delivery</span><span class="kw">Email</span><span class="kw">deliverability</span><span class="kw">contacts</span><span class="kw">subscribe</span><span class="kw">unsubscribe</span></div>
+    </header>
+    <div class="article-body"><p>Once you have exported your contact list, you can access insights regarding the reasons behind someone's decision to unsubscribe from your newsletter. You will encounter several options when reviewing this information under the column titled " Unsubscribe Reason".</p>
+<p><strong>Bounce</strong>: This indicates a permanent failure to deliver the email due to specific conditions within the recipient's mail server.</p>
+<p><strong>Unsubscribed</strong>: This denotes individuals who have opted out by using the unsubscribe link found in the footer of your newsletter</p>
+<p><strong>API</strong>: Unsubscribes that were initiated manually either through the dashboard or by utilizing an integrated platform.</p>
+<p><strong>Dropped</strong>: This scenario is similar to a bounce, occurring when our email service provider has previously attempted to send emails to a particular address and has repeatedly encountered bounces, invalid email addresses, or spam reports. In this case, the email will be "dropped" to safeguard the sender's reputation.</p>
+<p><strong>SoftBounce</strong>: If an email has bounced consecutively for 5 newsletters sends or more, the contact will be automatically unsubscribed.</p>
+<p><strong>Admin UI / UI</strong>: If an email address was manually unsubscribed from your rasa.io dashboard Contacts tab.   </p>
+<p><strong>One Click Unsubscribe</strong>: Per new <a href="https://learn.microsoft.com/en-us/dynamics365/release-plan/2023wave2/marketing/dynamics365-marketing/stay-compliant-one-click-unsubscribe-emails">Google and Yahoo bulk sender requirements</a>, subscribers must have an option to unsubscribe with one click via code in the header of the email. All rasa.io templates are equipped with this code and you are able to view those who used that specific unsubscribe method on your export.   </p>
+<p><strong>CSV</strong>: If an email was unsubscribed via CSV file import using the <a href="https://help.rasa.io/bulk-unsubscribe-contacts">Bulk Unsubscribe feature</a>.   </p>
+<p><strong>Spam Report</strong>: If an subscriber marked your newsletter as spam, they will be automatically unsubscribed.   </p>
+<p><strong>Other or blank</strong>: If a contact has unsubscribed prior to 2020, we may not have the Unsubscribe Reason data available as we were not tracking that detail at the time.   </p>
+<p>Please see below for an example of what you would see when looking for the Unsubscribe Reason in a Contact Export.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active</td>
+<td>Subscribed</td>
+<td>Unsubscribed Reason</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Unsubscribed</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>API</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Bounce</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Dropped</td>
+</tr>
+</tbody>
+</table></div>
+    <nav class="article-nav"><a href="contacts--what-do-the-fields-in-my-contacts-export-represent.html"><div class="label">← Previous</div><div class="title">What do the fields in my Contacts Export represent?</div></a><a class="next" href="contacts--what-is-the-difference-between-contacts-and-subscribers.html"><div class="label">Next →</div><div class="title">What is the difference between Contacts and Subscribers?</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

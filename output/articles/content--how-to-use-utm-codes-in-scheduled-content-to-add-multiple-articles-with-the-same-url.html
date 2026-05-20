@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Use UTM Codes in Scheduled Content to Add Multiple Articles with the Same URL · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link active" href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/content.html">Content</a>
+    <span class="sep">/</span><span>How to Use UTM Codes in Scheduled Content to Add Multiple Articles with the Same URL</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>How to Use UTM Codes in Scheduled Content to Add Multiple Articles with the Same URL</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/content.html">Content</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/how-to-use-utm-codes-in-scheduled-content-multiple-articles" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">content scheduling</span><span class="kw">UTM codes</span></div>
+    </header>
+    <div class="article-body"><p><em>If you plan to feature the same URL more than once in future newsletters using Scheduled Content, it's important to understand how the rasa.io platform identifies and handles repeated links.</em></p>
+<h6>Why only one article per URL can be scheduled</h6>
+<p>When you add content to Scheduled Content in rasa.io, our system uses the <strong>URL as the unique identifier</strong> for that article. This helps us track engagement, avoid duplicates, and maintain consistency in how content is handled.</p>
+<p>Because of this:</p>
+<blockquote>
+<p>If you try to schedule multiple articles with the <strong>exact same URL</strong> for different future dates, the system will treat them as the <strong>same article</strong> — even if you’ve changed the headline or description.</p>
+</blockquote>
+<p>The result? Your new scheduled entries may <strong>overwrite or merge</strong> with your original entry.</p>
+<h6>The solution: Use UTM codes to make URLs unique</h6>
+<p>To schedule the same article multiple times on different dates, we recommend <strong>modifying the URL slightly</strong> using <strong>UTM parameters</strong>. These parameters make each version of the link unique while still pointing to the same destination.</p>
+<h6>Example:</h6>
+<p>Let’s say your base URL is: https://example.com/awesome-report<br>
+To schedule this article for three different send dates, you could use:</p>
+<ol>
+<li>https://example.com/awesome-report?utm_source=rasa&amp;utm_campaign=april1</li>
+<li>https://example.com/awesome-report?utm_source=rasa&amp;utm_campaign=april8</li>
+<li>https://example.com/awesome-report?utm_source=rasa&amp;utm_campaign=april15</li>
+</ol>
+<p>Each of these links will be treated as a separate article in Scheduled Content, allowing you to:</p>
+<ul>
+<li>Customize the title or description for each instance</li>
+<li>Set different rank levels if desired</li>
+<li>Feature the same report multiple times without merging issues</li>
+</ul>
+<h6>Recap:</h6>
+<ul>
+<li>rasa.io uses the <strong>URL as the unique identifier</strong> for scheduled articles.</li>
+<li>To schedule the same content more than once, <strong>change the URL</strong> slightly using UTM codes.</li>
+<li>This allows you to <strong>reuse content across multiple newsletters</strong> without overwrite issues.</li>
+</ul></div>
+    <nav class="article-nav"><a href="content--how-to-use-the-image-library.html"><div class="label">← Previous</div><div class="title">How to Use the Image Library</div></a><a class="next" href="content--how-upcoming-articles-works.html"><div class="label">Next →</div><div class="title">How Upcoming Articles works</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email Validation Process for CSV Uploads · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link active" href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link " href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/contacts.html">Contacts</a>
+    <span class="sep">/</span><span>Email Validation Process for CSV Uploads</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Email Validation Process for CSV Uploads</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/contacts.html">Contacts</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/email-validation-process-for-csv-uploads" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">deliverability</span><span class="kw">email validation</span><span class="kw">csv upload</span></div>
+    </header>
+    <div class="article-body"><p><em>Our enhanced email validation process for CSV uploads ensures high deliverability, compliance, and data hygiene by classifying email addresses into specific categories and providing actionable insights.</em></p>
+<h6><strong>Process Overview</strong></h6>
+<ol>
+<li><strong>Upload CSV File</strong></li>
+</ol>
+<ul>
+<li>
+<p>User uploads email list in CSV format.<br>
+2. <strong>Validation and Analysis</strong></p>
+</li>
+<li>
+<p>The system evaluates addresses based on metrics and statuses described above.<br>
+3. <strong>Detailed Reporting</strong></p>
+</li>
+<li>
+<p>A comprehensive report is provided, breaking down deliverability status, sub-statuses, and recommended actions.</p>
+</li>
+<li>This information is not readily available to the rasa.io team. Please contact to discuss obtaining this reporting.</li>
+</ul>
+<h6><strong>Classifications:</strong></h6>
+<h6><strong>Valid Emails</strong></h6>
+<p>These addresses are safe to email and have a bounce rate below 2%.</p>
+<ul>
+<li><strong>Alias_address:</strong> Valid but act as forwarders (e.g., "info@example.com" forwards to "user@example.com"). An alias is a valid email address, and your email will not bounce.</li>
+<li><strong>Leading_period_removed:</strong> Gmail addresses starting with <code>.</code> are adjusted for compatibility.</li>
+<li><strong>Alternate:</strong> These emails are valid but likely to be secondary addresses for the users. Alternate emails are often used to sign up for accounts but do not see much engagement.</li>
+</ul>
+<h6><strong>Invalid Emails</strong></h6>
+<p>Addresses that cannot receive emails and should be removed. Emails that are undeliverable due to syntax issues, inactive domains, or other permanent errors.</p>
+<ul>
+<li><strong>Sub-Statuses:</strong></li>
+<li><strong>Does_not_accept_mail:</strong> Domain only sends but does not receive emails.</li>
+<li><strong>Failed_syntax_check:</strong> Emails that fail RFC syntax protocols.</li>
+<li><strong>Mailbox_not_found:</strong> These emails addresses are valid in syntax, but do not exist.</li>
+<li><strong>No_dns_entries:</strong> These emails are valid in syntax, but the domain doesn't have any DNS records or incomplete DNS Records. Therefore, mail programs will have difficulty delivering emails to them or be entirely unsuccessful.</li>
+<li>
+<p><strong>Mailbox_quota_exceeded</strong> - These addresses exceeded their space quota and no longer accept emails (temporarily).</p>
+</li>
+<li>
+<ul>
+<li><strong>Unroutable_ip_address:</strong> These email domains point to an unroutable IP address.</li>
+</ul>
+</li>
+</ul>
+<h6><strong>Catch-All Emails</strong></h6>
+<p>Impossible to fully validate without sending an email. While deliverable in some cases, they carry a higher bounce risk.</p>
+<ul>
+<li>Indicates domains configured to accept all emails, making validation uncertain.</li>
+</ul>
+<h6><strong>Spamtrap Emails</strong></h6>
+<p>Addresses likely set as spam traps. Avoid emailing these to prevent blacklisting.</p>
+<h6><strong>Abuse Emails</strong></h6>
+<p>These emails are of people known to click the abuse links in emails, hence abusers or complainers. We recommend not emailing these addresses.</p>
+<h6><strong>Do Not Mail</strong></h6>
+<p>These are company emails, role-based, or simply addresses you should avoid emailing. They are broken down into 6 sub-categories</p>
+<ul>
+<li><strong>Sub-Statuses:</strong></li>
+<li><strong>Disposable:</strong> These email addresses are temporary and become invalid after a set period. Avoid adding disposable emails to your list to avoid future bounces.</li>
+<li><strong>Role_based:</strong> These emails belong to a position or a group of people, like sales@ info@ and contact@. Role-based emails strongly correlate to people reporting emails sent to them as spam and abuse.</li>
+<li><strong>Toxic:</strong> These email addresses are known for abuse and spam. They may also be bot-created emails. If any of your emails possess this flag, you shouldn't email them. We also provide additional fields that you should consider before emailing.</li>
+<li><strong>Global_suppression:</strong> These emails are found in many popular global suppression lists (GSL). They consist of known ISP complainers, direct complainers, purchased addresses, domains that don't send mail, and known litigators.Found in widely known suppression lists.</li>
+<li><strong>Possible_trap:</strong> These emails contain keywords that might correlate to possible spam traps like spam@ or @spamtrap.com. Examine these before deciding whether to send emails to them or not.</li>
+</ul>
+<h6><strong>Why Do Not Mail?</strong></h6>
+<p>The <strong>Do Not Mail</strong> category is crucial for protecting your IP/domain reputation. It flags addresses likely to harm email campaigns, ensuring your emails land in inboxes, not spam folders.</p>
+<h6><strong>Unknown Emails</strong></h6>
+<p>Validation could not determine a result due to issues like offline servers or anti-spam measures.</p>
+<ul>
+<li><strong>Sub-Statuses:</strong></li>
+<li><strong>Antispam_system</strong> - These emails have anti-spam systems deployed that are preventing us from validating these emails. You can submit these to us through the contact us screen.</li>
+<li><strong>Exception_occurred</strong> - These emails caused an exception when validating. If this happens repeatedly, please let us know.</li>
+<li><strong>Failed_smtp_connection</strong> - These emails belong to a mail server that won't allow an SMTP connection. Most of the time, these emails will end up being invalid.</li>
+<li><strong>Forcible_disconnect</strong> - These emails belong to a mail server that disconnects immediately upon connecting. Most of the time, these emails will end up being invalid.</li>
+<li><strong>Greylisted</strong> - Greylisting technology is temporarily preventing the validation attempt. If you resubmit these emails, they will often validate on a second pass.</li>
+<li><strong>Mail_server_did_not_respond</strong> - These emails belong to a mail server that is not responding to mail commands. Most of the time, these emails will end up being invalid.</li>
+<li><strong>Mail_server_temporary_error</strong> - These emails belong to a mail server returning a temporary error. Most of the time, these emails will end up being invalid.</li>
+<li><strong>Timeout_exceeded</strong> - These emails belong to a mail server that responds slowly. Most of the time, these emails will end up being invalid.</li>
+</ul>
+<h6><strong>Best Practices</strong></h6>
+<ul>
+<li>Regularly validate and clean email lists.</li>
+<li>Avoid risky addresses flagged by the system.</li>
+<li>Monitor and address SMTP bounce codes for insights on deliverability issues.</li>
+</ul>
+<p>This process ensures that your newsletters are effective, compliant, and capable of maintaining a strong sender reputation.</p></div>
+    <nav class="article-nav"><a href="contacts--contact-privacy.html"><div class="label">← Previous</div><div class="title">Contact Privacy</div></a><a class="next" href="contacts--enterprise-only-importing-interest-data-for-contacts.html"><div class="label">Next →</div><div class="title">[ENTERPRISE ONLY] Importing Interest Data for Contacts</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>

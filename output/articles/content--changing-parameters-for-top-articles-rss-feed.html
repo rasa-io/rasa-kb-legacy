@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changing Parameters for Top Articles RSS Feed · rasa.io Knowledge Base</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/favicon.png">
+<script>window.KB_ROOT = "../";</script>
+</head>
+<body class="article-main">
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <img src="../assets/rasa-logo.png" alt="rasa.io" class="brand-logo">
+    </a>
+    <span class="kb-tag">Knowledge Base</span>
+    <span class="spacer"></span>
+    <div class="search-wrap">
+        <input type="search" id="topbar-search" placeholder="Search the knowledge base…" autocomplete="off">
+        <div class="search-results" id="topbar-search-results"></div>
+    </div>
+</header>
+<div class="layout">
+    <aside class="sidebar"><h4>Browse by category</h4>
+<a class="cat-link " href="../index.html"><span class="cat-icon">🏠</span><span>Home</span></a>
+<a class="cat-link " href="../categories/account.html"><span class="cat-icon">👤</span><span>Account</span><span class="cat-count">9</span></a>
+<a class="cat-link " href="../categories/analytics.html"><span class="cat-icon">📊</span><span>Analytics</span><span class="cat-count">16</span></a>
+<a class="cat-link " href="../categories/contacts.html"><span class="cat-icon">👥</span><span>Contacts</span><span class="cat-count">13</span></a>
+<a class="cat-link active" href="../categories/content.html"><span class="cat-icon">📰</span><span>Content</span><span class="cat-count">36</span></a>
+<a class="cat-link " href="../categories/dashboard-walkthrough-and-videos.html"><span class="cat-icon">🎬</span><span>Dashboard Walkthrough and Videos</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/design.html"><span class="cat-icon">🎨</span><span>Design</span><span class="cat-count">24</span></a>
+<a class="cat-link " href="../categories/faqs.html"><span class="cat-icon">❓</span><span>FAQs</span><span class="cat-count">2</span></a>
+<a class="cat-link " href="../categories/general.html"><span class="cat-icon">📘</span><span>General</span><span class="cat-count">23</span></a>
+<a class="cat-link " href="../categories/integrations.html"><span class="cat-icon">🔌</span><span>Integrations</span><span class="cat-count">12</span></a>
+<a class="cat-link " href="../categories/schedule.html"><span class="cat-icon">📅</span><span>Schedule</span><span class="cat-count">4</span></a>
+<a class="cat-link " href="../categories/support.html"><span class="cat-icon">💬</span><span>Support</span><span class="cat-count">3</span></a>
+</aside>
+    <main class="main article-main">
+        
+<nav class="crumbs">
+    <a href="../index.html">Home</a><span class="sep">/</span>
+    <a href="../categories/content.html">Content</a>
+    <span class="sep">/</span><span>Changing Parameters for Top Articles RSS Feed</span>
+</nav>
+<article>
+    <header class="article-header">
+        <h1>Changing Parameters for Top Articles RSS Feed</h1>
+        <div class="article-meta">
+            <span>📁 <a href="../categories/content.html">Content</a></span>
+            <span><a class="src-link" href="https://help.rasa.io/changing-date-parameters-for-top-articles-rss-feed" target="_blank" rel="noopener">View original ↗</a></span>
+        </div>
+        <div class="keywords"><span class="kw">RSS feed</span><span class="kw">top articles</span><span class="kw">data parameters</span><span class="kw">content filtering</span><span class="kw">content verification</span><span class="kw">article retrieval</span></div>
+    </header>
+    <div class="article-body"><p>rasa.io provides a Top Articles RSS feed that pulls from the top clicked articles from the most recent send. The default is a two-week look back but the data parameters can be changed and the default for the number of articles in the feed is 10 and can be changed.</p>
+<p>This knowledge base page provides guidance on changing date parameters for the Top Articles RSS feed using the start_date and end_date parameters, changing the number of articles parameter using the num_records parameter, and filtering the feed to show only original articles using the source=original parameter.</p>
+<h6>Understanding Date Parameters</h6>
+<p>rasa.io supports both absolute and relative date parameters for filtering RSS feed content:</p>
+<h6>Absolute Dates</h6>
+<p>bash</p>
+<p>CopyEdit</p>
+<p><code>https://api-public.rasa.io/v1/top-articles/2061bfcd-f5eb-4e50-8a71-3a2513564174?format=rss&amp;start_date=2021-05-01&amp;end_date=2021-05-30</code></p>
+<p>This example fetches articles published between May 1, 2021, and May 30, 2021.</p>
+<h6>Relative Dates</h6>
+<p>bash</p>
+<p>CopyEdit</p>
+<p><code>https://api-public.rasa.io/v1/top-articles/2061bfcd-f5eb-4e50-8a71-3a2513564174?format=rss&amp;start_date=now-7d&amp;end_date=now-1d</code></p>
+<p>Here, the API fetches articles published in the last 7 days (from now-7d) up to yesterday (now-1d).</p>
+<h6>Using Relative Dates</h6>
+<p>rasa.io allows users to use convenient relative date expressions for flexibility with the RSS feed. See examples below:</p>
+<ul>
+<li>now-1d: Retrieve articles published within the last 1 day.</li>
+<li>now-7d: Retrieve articles from the last 7 days.</li>
+<li>now-3d: Retrieve articles from exactly 3 days before the current time.</li>
+<li>now-72h: Equivalent to -3d, representing a 72-hour time frame before the current time.</li>
+</ul>
+<p>/d: Cap the end date at the start of the current day.</p>
+<p>/h: Cap the end date at the start of the current hour.</p>
+<p>/m: Cap the end date at the start of the current month.</p>
+<p>Examples:</p>
+<ul>
+<li>now-4d/m: Retrieve content from 4 days before the current time, with the end date set at the beginning of the current month.</li>
+<li>now-1w/m: Retrieve content from 1 week before the current time, with the end date set at the beginning of the current month.</li>
+</ul>
+<h6>Step-by-Step Guide for Changing Date Parameters</h6>
+<ol>
+<li>Find your Top Articles RSS feed on the Widgets &amp; Tools page:<br>
+<a href="https://dashboard.rasa.io/widgets/toparticles">https://dashboard.rasa.io/widgets/toparticles</a></li>
+<li>Choose Date Parameters:</li>
+</ol>
+<p>The default parameters are a two-week look back. If you want to change that, decide whether you want to use absolute or relative dates for content retrieval.</p>
+<ol>
+<li>Modify the URL:</li>
+</ol>
+<p>Adjust the start_date and end_date parameters in the URL accordingly. See example below:</p>
+<ol>
+<li>Test the Modified Feed URL:</li>
+</ol>
+<p>Paste the modified URL in a web browser or a feed reader to verify that the API returns the desired content.</p>
+<h6>Step-by-Step Guide for Changing Number of Articles Parameters</h6>
+<ol>
+<li>Find your Top Articles RSS feed on the Widgets &amp; Tools page:<br>
+<a href="https://dashboard.rasa.io/widgets/toparticles">https://dashboard.rasa.io/widgets/toparticles</a></li>
+<li>Choose Number of Articles Parameter:</li>
+</ol>
+<p>The default parameter is 10 articles. If you want to change that, decide the number of articles you will want to retrieve.</p>
+<ol>
+<li>Modify the URL:</li>
+</ol>
+<p>Adjust the num_records parameter in the URL accordingly. See example below:</p>
+<p>bash</p>
+<p>CopyEdit</p>
+<p><code>https://api-public.rasa.io/v1/top-articles/2061bfcd-f5eb-4e50-8a71-3a2513564174?format=rss&amp;num_records=25</code></p>
+<ol>
+<li>Test the Modified Feed URL:</li>
+</ol>
+<p>Paste the modified URL in a web browser or a feed reader to verify that the API returns the desired content.</p>
+<h6>Step-by-Step Guide for Filtering Only Original Articles</h6>
+<ol>
+<li>Find your Top Articles RSS feed on the Widgets &amp; Tools page:<br>
+<a href="https://dashboard.rasa.io/widgets/toparticles">https://dashboard.rasa.io/widgets/toparticles</a></li>
+<li>Choose Source Parameter:</li>
+</ol>
+<p>If you want the feed to include only articles that are original content created through rasa.io, you can add the source parameter.</p>
+<ol>
+<li>Modify the URL:</li>
+</ol>
+<p>Adjust the source parameter in the URL by adding <code>source=original</code>. See example below:</p>
+<p>bash</p>
+<p>CopyEdit</p>
+<p><code>https://public-api.rasa.io/top-articles/b95c857c-e040-4662-a45f-a5b6bfe7a887?format=rss&amp;num_records=50&amp;source=original</code></p>
+<ol>
+<li>Test the Modified Feed URL:</li>
+</ol>
+<p>Paste the modified URL in a web browser or a feed reader to verify that the API returns only original articles.</p></div>
+    <nav class="article-nav"><a href="content--article-ordering-hierarchy-for-super-boosted-scheduled-content-boosted-and-more.html"><div class="label">← Previous</div><div class="title">Article Ordering - Hierarchy for Super Boosted, Scheduled Content, Boosted and more</div></a><a class="next" href="content--content-overview.html"><div class="label">Next →</div><div class="title">Content Overview</div></a></nav>
+</article>
+
+    </main>
+</div>
+<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<script src="../assets/search.js"></script>
+<script>
+    window.attachKBSearch('topbar-search', 'topbar-search-results');
+    const hs = document.getElementById('hero-search');
+    if (hs) window.attachKBSearch('hero-search', 'hero-search-results');
+</script>
+</body>
+</html>
