@@ -360,7 +360,7 @@ def page_template(title: str, body: str, root_rel: str, sidebar_html: str, body_
         {body}
     </main>
 </div>
-<footer class="footer">rasa.io Knowledge Base · The smart email platform for associations</footer>
+<footer class="footer">rasa.io Knowledge Base </footer>
 <script src="{root_rel}assets/search.js"></script>
 <script>
     window.attachKBSearch('topbar-search', 'topbar-search-results');
