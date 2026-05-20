@@ -21,7 +21,7 @@ from pathlib import Path
 
 import markdown as md
 
-ROOT = Path("/home/claude/kb_site")
+ROOT = Path(__file__).parent.resolve()
 CONTENT = ROOT / "content"
 OUT = ROOT / "output"
 
