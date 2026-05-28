@@ -2,6 +2,7 @@
 title: Introducing the rasa.io Learning Hub & Community!
 source: https://help.rasa.io/introducing-the-rasa.io-learning-hub-community
 keywords: support,onboarding,knowledge hub,community
+hidden: true
 ---
 
 We’ve launched the [**rasa.io Learning Hub & Community**](https://community.rasa.io), a centralized space for education, troubleshooting, and peer connection — all designed to help you get the most out of your rasa.io newsletter.
