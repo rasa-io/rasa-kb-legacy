@@ -64,6 +64,9 @@ def load_category(cat_dir: Path) -> dict | None:
     meta_file = cat_dir / "_category.json"
     if meta_file.exists():
         meta = json.loads(meta_file.read_text(encoding="utf-8"))
+        # skip categories marked as hidden
+        if meta.get("hidden") is True:
+            return None
         cat_name = meta.get("name", cat_slug.replace("-", " ").title())
     else:
         cat_name = cat_slug.replace("-", " ").title()
@@ -71,6 +74,9 @@ def load_category(cat_dir: Path) -> dict | None:
     for md_file in sorted(cat_dir.glob("*.md")):
         text = md_file.read_text(encoding="utf-8")
         fm, body = parse_frontmatter(text)
+        # skip articles marked as hidden
+        if fm.get("hidden", "").lower() in ("true", "yes", "1"):
+            continue
         articles.append({
             "title": fm.get("title", md_file.stem),
             "slug": md_file.stem,
