@@ -2,6 +2,7 @@
 title: rasa.io Support Overview
 source: https://help.rasa.io/rasa.io-support-overview
 keywords: support,representative,support overview,support response times
+hidden: true
 ---
 
 _rasa.io Support is here to help you!_
